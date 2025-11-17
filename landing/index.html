@@ -31,6 +31,7 @@
             <div class="hero-buttons">
               <button class="btn primary" onclick="openStreamModal()">Assistir ao Vivo</button>
               <button class="btn secondary" onclick="openOrnnModal()">Dicas Ornn</button>
+              <button class="btn tertiary" onclick="openSkinsModal()">Skins Ornn</button>
             </div>
           </div>
           <div class="hero-image">
@@ -287,6 +288,21 @@
               <div class="hexagon-value" style="top: 35%; left: 15%;">5/10</div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Galeria de Skins Ornn -->
+  <div id="skinsModal" class="modal">
+    <div class="modal-content skins-modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">🎨 Galeria de Skins - Ornn</h2>
+        <button class="modal-close" onclick="closeSkinsModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="skinsGallery" class="skins-gallery">
+          <!-- Skins serão carregadas dinamicamente -->
         </div>
       </div>
     </div>

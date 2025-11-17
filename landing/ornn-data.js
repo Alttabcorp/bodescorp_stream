@@ -175,6 +175,35 @@ function buildSkinsHTML(skins) {
 }
 
 /**
+ * Construir HTML moderno das skins para galeria
+ */
+function buildModernSkinsHTML(skins) {
+    if (!skins || skins.length === 0) return '<p>Nenhuma skin disponível.</p>';
+
+    let html = '<div class="modern-skins-grid">';
+    skins.forEach((skin, index) => {
+        const skinImageUrl = `${API_BASE}/img/champion/splash/Ornn_${skin.num}.jpg`;
+        const isClassic = skin.num === 0;
+        
+        html += `
+            <div class="modern-skin-card ${isClassic ? 'classic-skin' : ''}" data-skin-id="${skin.num}">
+                <div class="skin-image-container">
+                    <img src="${skinImageUrl}" alt="${skin.name}" class="skin-main-image" loading="lazy">
+                    <div class="skin-overlay">
+                        <div class="skin-info">
+                            <h3 class="skin-title">${skin.name}</h3>
+                            ${isClassic ? '<span class="skin-badge">Clássica</span>' : ''}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    html += '</div>';
+    return html;
+}
+
+/**
  * Carregar e exibir dados do Ornn
  */
 async function loadOrnnData() {

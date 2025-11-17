@@ -19,4 +19,36 @@ document.addEventListener('DOMContentLoaded', function(){
       window.location.href = '#'; // substituir pelo link do Twitch
     });
   }
+
+  // Modal functions
+  window.openStreamModal = function() {
+    const modal = document.getElementById('streamModal');
+    if(modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeStreamModal = function() {
+    const modal = document.getElementById('streamModal');
+    if(modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  };
+
+  // Close modal when clicking outside
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('streamModal');
+    if(modal && event.target === modal) {
+      closeStreamModal();
+    }
+  });
+
+  // Close modal with ESC key
+  document.addEventListener('keydown', function(event) {
+    if(event.key === 'Escape') {
+      closeStreamModal();
+    }
+  });
 });

@@ -28,7 +28,10 @@
           <div class="hero-content">
             <h1>Bodescorp</h1>
             <p>Streamer brasileiro especialista em Ornn no League of Legends. Lives diárias com gameplay profissional e dicas avançadas.</p>
-            <button class="btn primary" onclick="openStreamModal()">Assistir ao Vivo</button>
+            <div class="hero-buttons">
+              <button class="btn primary" onclick="openStreamModal()">Assistir ao Vivo</button>
+              <button class="btn secondary" onclick="openOrnnModal()">Dicas Ornn</button>
+            </div>
           </div>
           <div class="hero-image">
             <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ornn_0.jpg" alt="Ornn - O Forjador de Fogo" class="ornn-splash">
@@ -129,6 +132,161 @@
             </svg>
             <span>YouTube</span>
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ornn Info -->
+  <div id="ornnModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">🎯 Guia Ornn - O Forjador de Fogo</h2>
+        <button class="modal-close" onclick="closeOrnnModal()">&times;</button>
+      </div>
+
+      <div class="ornn-info">
+        <div class="ornn-overview">
+          <div class="ornn-champion-card">
+            <img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/champion/Ornn.png" alt="Ornn" class="ornn-modal-icon">
+            <div class="champion-info">
+              <h2>Ornn</h2>
+              <p class="champion-title">O Forjador de Fogo</p>
+              <div class="champion-tags">
+                <span class="tag tank">Tank</span>
+                <span class="tag fighter">Fighter</span>
+              </div>
+            </div>
+          </div>
+          <div class="ornn-description">
+            <div class="stats-summary">
+              <div class="stat-item">
+                <span class="stat-label">Função:</span>
+                <span class="stat-value">Top Lane</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Dificuldade:</span>
+                <span class="stat-value">Média</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Estilo:</span>
+                <span class="stat-value">Durável</span>
+              </div>
+            </div>
+            <p class="champion-lore">Ornn é um tanque durável que prospera em combates prolongados, usando suas habilidades para controlar o mapa e proteger aliados. Como um semideus antigo da forja, ele molda o mundo com seu martelo imenso.</p>
+          </div>
+        </div>
+
+        <div class="ornn-section">
+          <h3>🔨 Habilidades Principais</h3>
+          <div class="abilities-grid">
+            <div class="ability">
+              <div class="ability-header">
+                <img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/OrnnQ.png" alt="Q" class="ability-icon">
+                <h4>Forja Viva (Q)</h4>
+              </div>
+              <p>Ornn lança um projétil que causa dano e deixa uma zona de fogo que queima inimigos.</p>
+            </div>
+            <div class="ability">
+              <div class="ability-header">
+                <img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/OrnnW.png" alt="W" class="ability-icon">
+                <h4>Escudo Vivo (W)</h4>
+              </div>
+              <p>Cria um escudo que absorve dano e concede velocidade de movimento.</p>
+            </div>
+            <div class="ability">
+              <div class="ability-header">
+                <img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/OrnnE.png" alt="E" class="ability-icon">
+                <h4>Chamas Esmagadoras (E)</h4>
+              </div>
+              <p>Ornn salta para uma direção, causando dano e atordoando inimigos próximos.</p>
+            </div>
+            <div class="ability">
+              <div class="ability-header">
+                <img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/OrnnR.png" alt="R" class="ability-icon">
+                <h4>Chamado do Mestre Forjador (R)</h4>
+              </div>
+              <p>Ornn invoca aliados lendários para ajudar em combate.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ornn-section">
+          <h3>⬡ Estatísticas do Campeão</h3>
+          <div class="hexagon-chart">
+            <svg viewBox="0 0 320 280" class="hexagon-svg">
+              <!-- Background grid -->
+              <defs>
+                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--border-light)" stroke-width="0.5" opacity="0.3"/>
+                </pattern>
+                <radialGradient id="hexagonGradient" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" style="stop-color:var(--accent-primary);stop-opacity:0.1" />
+                  <stop offset="100%" style="stop-color:var(--accent-primary);stop-opacity:0.3" />
+                </radialGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+
+              <!-- Hexagon levels (background) -->
+              <polygon points="160,50 235,90 235,180 160,220 85,180 85,90" fill="none" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+              <polygon points="160,70 215,105 215,165 160,200 105,165 105,105" fill="none" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+              <polygon points="160,90 195,120 195,150 160,180 125,150 125,120" fill="none" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+
+              <!-- Main hexagon (data) -->
+              <polygon points="160,75 210,108 210,162 160,195 110,162 110,108"
+                       fill="url(#hexagonGradient)" stroke="var(--accent-primary)" stroke-width="3"/>
+
+              <!-- Axis lines -->
+              <g stroke="var(--text-muted)" stroke-width="1" opacity="0.6">
+                <line x1="160" y1="50" x2="160" y2="75"/>
+                <line x1="235" y1="90" x2="210" y2="108"/>
+                <line x1="235" y1="180" x2="210" y2="162"/>
+                <line x1="160" y1="220" x2="160" y2="195"/>
+                <line x1="85" y1="180" x2="110" y2="162"/>
+                <line x1="85" y1="90" x2="110" y2="108"/>
+              </g>
+
+              <!-- Data points with glow effect -->
+              <circle cx="160" cy="75" r="5" fill="var(--accent-primary)" stroke="var(--bg-primary)" stroke-width="2">
+                <animate attributeName="r" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="210" cy="108" r="5" fill="var(--accent-primary)" stroke="var(--bg-primary)" stroke-width="2">
+                <animate attributeName="r" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="210" cy="162" r="5" fill="var(--accent-primary)" stroke="var(--bg-primary)" stroke-width="2">
+                <animate attributeName="r" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="160" cy="195" r="5" fill="var(--accent-primary)" stroke="var(--bg-primary)" stroke-width="2">
+                <animate attributeName="r" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="110" cy="162" r="5" fill="var(--accent-primary)" stroke="var(--bg-primary)" stroke-width="2">
+                <animate attributeName="r" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="110" cy="108" r="5" fill="var(--accent-primary)" stroke="var(--bg-primary)" stroke-width="2">
+                <animate attributeName="r" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+
+            <!-- Labels -->
+            <div class="hexagon-labels">
+              <div class="hexagon-label damage" style="top: 8%; left: 50%; transform: translateX(-50%);">⚔️ Dano</div>
+              <div class="hexagon-label control" style="top: 28%; right: 3%;">🎯 Controle</div>
+              <div class="hexagon-label mobility" style="bottom: 28%; right: 3%;">🏃 Mobilidade</div>
+              <div class="hexagon-label durability" style="bottom: 8%; left: 50%; transform: translateX(-50%);">🛡️ Durabilidade</div>
+              <div class="hexagon-label utility" style="bottom: 28%; left: 3%;">🔧 Utilidade</div>
+              <div class="hexagon-label difficulty" style="top: 28%; left: 3%;">🧠 Dificuldade</div>
+            </div>
+
+            <!-- Valores -->
+            <div class="hexagon-values">
+              <div class="hexagon-value" style="top: 15%; left: 50%; transform: translateX(-50%);">7/10</div>
+              <div class="hexagon-value" style="top: 35%; right: 15%;">8/10</div>
+              <div class="hexagon-value" style="bottom: 35%; right: 15%;">6/10</div>
+              <div class="hexagon-value" style="bottom: 15%; left: 50%; transform: translateX(-50%);">9/10</div>
+              <div class="hexagon-value" style="bottom: 35%; left: 15%;">9/10</div>
+              <div class="hexagon-value" style="top: 35%; left: 15%;">5/10</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

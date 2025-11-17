@@ -340,9 +340,9 @@ body {
   background-color: var(--bg-primary);
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
-  max-width: 500px;
-  width: 90%;
-  max-height: 80vh;
+  max-width: 800px;
+  width: 95%;
+  max-height: 90vh;
   overflow-y: auto;
   position: relative;
   box-shadow: var(--shadow-md);
@@ -454,5 +454,286 @@ body {
 
   .stream-name {
     font-size: var(--font-size-base);
+  }
+}
+
+/* Ornn Modal Styles */
+.ornn-info {
+  /* Removed max-height and overflow-y to prevent double scrollbars */
+}
+
+.ornn-overview {
+  display: flex;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.ornn-champion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.ornn-modal-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-lg);
+  border: 3px solid var(--accent-primary);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-md);
+}
+
+.champion-info h2 {
+  margin: 0 0 var(--space-xs);
+  color: var(--text-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.champion-title {
+  color: var(--accent-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin: 0 0 var(--space-md);
+  font-style: italic;
+}
+
+.champion-tags {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.tag {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tag.tank {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.tag.fighter {
+  background: var(--accent-secondary);
+  color: white;
+}
+
+.stats-summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.stat-label {
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.stat-value {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.champion-lore {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-sm);
+  text-align: justify;
+}
+
+.ability {
+  background: var(--bg-secondary);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.ability:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-primary);
+}
+
+.ability-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.ability-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--accent-primary);
+  background: var(--bg-primary);
+}
+
+.ability h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ability p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-sm);
+}
+
+/* Hexagon Chart */
+.hexagon-chart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--space-xl) 0;
+  min-height: 300px;
+}
+
+.hexagon-svg {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.hexagon-labels, .hexagon-values {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hexagon-label {
+  position: absolute;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.hexagon-value {
+  position: absolute;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--accent-primary);
+  background: var(--bg-primary);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-primary);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Hero buttons */
+.hero-buttons {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.btn.secondary {
+  background: transparent;
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn.secondary:hover {
+  background: var(--accent-primary);
+  color: white;
+}
+
+/* Mobile adjustments for Ornn modal */
+@media (max-width: 768px) {
+  .ornn-overview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ornn-modal-icon {
+    align-self: center;
+  }
+
+  .ornn-overview {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-lg);
+  }
+
+  .ornn-modal-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .champion-info h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .champion-title {
+    font-size: var(--font-size-base);
+  }
+
+  .ability-header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+  }
+
+  .ability-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hexagon-chart {
+    min-height: 250px;
+  }
+
+  .hexagon-label {
+    font-size: var(--font-size-xs);
+  }
+
+  .hexagon-value {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
   }
 }

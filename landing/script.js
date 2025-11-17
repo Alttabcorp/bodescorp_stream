@@ -37,18 +37,41 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   };
 
-  // Close modal when clicking outside
+  // Ornn modal functions
+  window.openOrnnModal = function() {
+    const modal = document.getElementById('ornnModal');
+    if(modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeOrnnModal = function() {
+    const modal = document.getElementById('ornnModal');
+    if(modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  };
+
+  // Close modals when clicking outside
   document.addEventListener('click', function(event) {
-    const modal = document.getElementById('streamModal');
-    if(modal && event.target === modal) {
+    const streamModal = document.getElementById('streamModal');
+    const ornnModal = document.getElementById('ornnModal');
+
+    if(streamModal && event.target === streamModal) {
       closeStreamModal();
+    }
+    if(ornnModal && event.target === ornnModal) {
+      closeOrnnModal();
     }
   });
 
-  // Close modal with ESC key
+  // Close modals with ESC key
   document.addEventListener('keydown', function(event) {
     if(event.key === 'Escape') {
       closeStreamModal();
+      closeOrnnModal();
     }
   });
 });

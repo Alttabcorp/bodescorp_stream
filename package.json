@@ -1,0 +1,29 @@
+{
+  "name": "bodescorp-stream-landing",
+  "version": "1.0.0",
+  "description": "Landing page para streamer Bodescorp especialista em Ornn",
+  "main": "src/landing/index.html",
+  "scripts": {
+    "start": "cd src/landing && python3 -m http.server 8000",
+    "dev": "cd src/landing && python3 -m http.server 8000",
+    "build": "echo 'Este é um projeto estático - não há build necessário'",
+    "preview": "cd src/landing && python3 -m http.server 3000"
+  },
+  "keywords": [
+    "landing-page",
+    "streamer",
+    "ornn",
+    "league-of-legends",
+    "twitch"
+  ],
+  "author": "Bodescorp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alttabcorp/bodescorp_stream.git"
+  },
+  "homepage": "https://alttabcorp.github.io/bodescorp_stream/",
+  "bugs": {
+    "url": "https://github.com/Alttabcorp/bodescorp_stream/issues"
+  }
+}

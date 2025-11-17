@@ -12,13 +12,16 @@ npm install
 npm run dev
 
 # Ou executar diretamente
-cd src/landing && python3 -m http.server 8000
+python3 -m http.server 8000
 ```
 
 ## 📁 Estrutura
 
 ```
-├── src/landing/     # Arquivos da aplicação
+├── index.html       # Página principal
+├── styles.css       # Estilos CSS
+├── script.js        # JavaScript
+├── ornn-data.js     # Dados do Ornn
 ├── assets/         # Recursos estáticos
 ├── docs/           # Documentação
 └── package.json    # Configuração
@@ -31,9 +34,9 @@ cd src/landing && python3 -m http.server 8000
 
 ## 📝 Personalização
 
-1. Edite `src/landing/index.html` para links e conteúdo
-2. Modifique `src/landing/styles.css` para aparência
-3. Atualize dados em `src/landing/ornn-data.js`
+1. Edite `index.html` para links e conteúdo
+2. Modifique `styles.css` para aparência
+3. Atualize dados em `ornn-data.js`
 
 ## 📚 Documentação
 

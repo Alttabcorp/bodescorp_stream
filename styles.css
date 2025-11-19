@@ -231,6 +231,56 @@ body {
   flex-shrink: 0;
 }
 
+/* Join Section */
+.join-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-primary);
+  text-align: center;
+}
+
+.join-section h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--space-lg);
+  color: var(--text-primary);
+}
+
+.join-section p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.join-section .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.join-section .btn:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.join-section .btn svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
 /* Stats */
 .stats-section {
   padding: var(--space-3xl) 0;
@@ -279,6 +329,56 @@ body {
 .stat svg {
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
+}
+
+/* Saga Section */
+.saga-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-secondary);
+  text-align: center;
+}
+
+.saga-section h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--space-lg);
+  color: var(--text-primary);
+}
+
+.saga-section p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.saga-section .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.saga-section .btn:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.saga-section .btn svg {
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 

@@ -1073,3 +1073,183 @@ body {
 .footer-made-link:hover {
   color: var(--accent-secondary);
 }
+
+/* ========================================
+   MODAL DE BOAS-VINDAS - MINIMALISTA
+   ======================================== */
+
+.welcome-modal-content {
+  max-width: 480px;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.welcome-tip {
+  background: linear-gradient(135deg, rgba(234, 88, 12, 0.08), rgba(220, 38, 38, 0.08));
+  border: 1px solid rgba(234, 88, 12, 0.3);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.tip-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.tip-icon {
+  font-size: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.tip-header h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--accent-primary);
+  margin: 0;
+}
+
+.tip-text {
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.tip-text strong {
+  color: var(--accent-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.items-reference {
+  margin: var(--space-md) 0;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.items-image-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.items-placeholder {
+  display: block;
+  width: 100%;
+  max-width: 265px;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.slot-indicator {
+  position: absolute !important;
+  top: -48px !important;
+  left: 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+  animation: bounce 2s infinite !important;
+  z-index: 9999 !important;
+  pointer-events: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.indicator-arrow {
+  font-size: 2rem !important;
+  color: #ea580c !important;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8)) !important;
+  line-height: 1 !important;
+  display: block !important;
+}
+
+.indicator-text {
+  background: #ea580c !important;
+  color: #ffffff !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  padding: 6px 14px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.6) !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  display: block !important;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.welcome-cta {
+  padding: var(--space-md) 0 0 0;
+  border-top: 1px solid var(--border-light);
+  margin-top: var(--space-sm);
+}
+
+.welcome-cta p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 768px) {
+  .welcome-modal-content {
+    max-width: 95%;
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .welcome-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .tip-header h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .tip-text {
+    font-size: var(--font-size-sm);
+  }
+
+  .items-reference {
+    padding-top: 40px;
+  }
+
+  .items-placeholder {
+    max-width: 100%;
+  }
+
+  .slot-indicator {
+    left: 8px !important;
+    top: -38px !important;
+  }
+
+  .indicator-arrow {
+    font-size: 1.5rem !important;
+  }
+
+  .indicator-text {
+    font-size: 0.7rem !important;
+    padding: 5px 10px !important;
+  }
+}
+

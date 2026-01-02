@@ -1,5 +1,14 @@
 // Script mínimo para interações: menu mobile, inserir ano e alternância de tema
 document.addEventListener('DOMContentLoaded', function(){
+  // Exibir modal de boas-vindas ao carregar a página
+  setTimeout(() => {
+    const welcomeModal = document.getElementById('welcomeModal');
+    if (welcomeModal) {
+      welcomeModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  }, 500);
+
   const menuToggle = document.getElementById('menuToggle');
   if(menuToggle){
     menuToggle.addEventListener('click', ()=>{
@@ -19,6 +28,23 @@ document.addEventListener('DOMContentLoaded', function(){
       window.location.href = '#'; // substituir pelo link do Twitch
     });
   }
+
+  // Welcome modal functions
+  window.openWelcomeModal = function() {
+    const modal = document.getElementById('welcomeModal');
+    if(modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeWelcomeModal = function() {
+    const modal = document.getElementById('welcomeModal');
+    if(modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  };
 
   // Modal functions
   window.openStreamModal = function() {
@@ -94,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const streamModal = document.getElementById('streamModal');
     const ornnModal = document.getElementById('ornnModal');
     const skinsModal = document.getElementById('skinsModal');
+    const welcomeModal = document.getElementById('welcomeModal');
 
     if(streamModal && event.target === streamModal) {
       closeStreamModal();
@@ -104,6 +131,9 @@ document.addEventListener('DOMContentLoaded', function(){
     if(skinsModal && event.target === skinsModal) {
       closeSkinsModal();
     }
+    if(welcomeModal && event.target === welcomeModal) {
+      closeWelcomeModal();
+    }
   });
 
   // Close modals with ESC key
@@ -112,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function(){
       closeStreamModal();
       closeOrnnModal();
       closeSkinsModal();
+      closeWelcomeModal();
     }
   });
 });

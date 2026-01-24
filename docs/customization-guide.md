@@ -90,7 +90,7 @@ Edite `src/landing/styles.css`:
 ```
 
 4. **Atualizar dados do campeão:**
-```javascript
+```javascriptd
 // Em ornn-data.js, renomear para yasuo-data.js
 // Trocar todas as referências de 'Ornn' para 'Yasuo'
 ```
@@ -229,13 +229,3 @@ Adicione ao `<head>` do HTML:
 4. **Mobile quebrado:**
    - Teste media queries
    - Use Chrome DevTools device mode
-
-## 📞 Suporte
-
-- **Documentação Técnica**: [development-guide.md](development-guide.md)
-- **Issues**: [GitHub Issues](https://github.com/Alttabcorp/bodescorp_stream/issues)
-- **Discord**: Comunidade League of Legends
-
----
-
-**💡 Dica**: Sempre teste as mudanças em diferentes navegadores e dispositivos antes de publicar!
